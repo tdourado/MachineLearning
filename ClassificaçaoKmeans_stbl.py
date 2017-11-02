@@ -42,9 +42,9 @@ def kmeans():
     
     # train data 
     X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=0,
-                                                        test_size=0.50)  
+                                                        test_size=0.10)  
     # Kmeans
-    clf = KMeans(n_clusters=2, n_init=50, precompute_distances=True)
+    clf = KMeans(n_clusters=3, n_init=50, precompute_distances=True)
     clf.fit(X_train)
     y_pred = clf.predict(X_train)  
     centroids = clf.cluster_centers_ 
